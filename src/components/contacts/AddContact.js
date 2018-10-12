@@ -28,7 +28,7 @@ import uuid from 'uuid';
           phone: ''
         });
       };
-      onChange = (e) => this.setState({ e.target.name]: e.target.value});
+      onChange = (p) => this.setState({ [p.target.name]: p.target.value});
   render() {
     
     const {name, email, phone} = this.state; 
