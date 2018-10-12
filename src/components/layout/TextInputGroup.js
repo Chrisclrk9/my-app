@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const TextInpuGroup = ({
+const TextInputGroup = ({
     label, 
     name,
     value,
@@ -28,7 +28,7 @@ const TextInpuGroup = ({
   )
 };
 
-textInputGroup.PropTypes = {
+TextInputGroup.PropTypes = {
     label: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
@@ -37,7 +37,7 @@ textInputGroup.PropTypes = {
     onChange: PropTypes.func.isRequired
 }
 
-TextInpuGroup.defaultProps = {
+TextInputGroup.defaultProps = {
     type: 'text'
 }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Consumer } from '../../Context';
+import TextInputGroup from '../layout/TextInputGroup';
 import uuid from 'uuid';
 
  class AddContact extends Component {
@@ -45,43 +46,32 @@ import uuid from 'uuid';
         <div className="card-body">
             <form onSubmit={this.onSubmit.bind(this, dispatch)}>
 
-
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input 
-                type="text" 
+              <TextInputGroup 
+                label="Name"
                 name="name"
-                className="form-control 
-                form-control-lg"
-                placeholder='Enter Name...'
+                placeholder= "Enter Name..."
                 value={name}
                 onChange={this.onChange}
-                />
-              </div>
+              />
 
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input 
-                type="email" 
+              <TextInputGroup 
+                label="Email"
                 name="email"
-                className="form-control 
-                form-control-lg"
-                placeholder='Enter email address...'
+                type="email"
+                placeholder= "Enter Email..."
                 value={email}
-                onChange={this.onChange}/>
-              </div>
+                onChange={this.onChange}
+              />
 
-              <div className="form-group">
-                <label htmlFor="phone">Phone</label>
-                <input 
-                type="text" 
+              <TextInputGroup 
+                label="Phone"
                 name="phone"
-                className="form-control 
-                form-control-lg"
-                placeholder='Enter phone...'
+                placeholder= "Enter phone..."
                 value={phone}
-                onChange={this.onChange}/>
-              </div>
+                onChange={this.onChange}
+              />
+
+              
 
               <input 
                 type="submit"
